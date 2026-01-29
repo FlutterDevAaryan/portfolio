@@ -29,6 +29,12 @@ jobs:
       - name: Build
         run: node ./node_modules/vite/bin/vite.js build
 
+      - name: Verify build output
+        run: |
+          ls -la ./dist
+          ls -la ./dist/assets 2>/dev/null || true
+          head -30 ./dist/index.html
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
