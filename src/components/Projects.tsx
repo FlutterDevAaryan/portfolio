@@ -34,7 +34,7 @@ export const Projects = () => {
             </h2>
           </div>
           <p className="max-w-md text-xs text-slate-400 md:text-sm">
-            A curated selection of 8 Flutter apps and a real-time chat backend,
+            A curated selection of 8 Flutter apps and a Node.js backend,
             all available as open-source repositories on GitHub. Each project
             highlights clean architecture, robust engineering, and thoughtful
             UX.

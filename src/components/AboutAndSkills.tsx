@@ -29,7 +29,7 @@ export const AboutAndSkills = () => {
             <span className="font-semibold text-slate-100">
               scalable backend services
             </span>
-            . From designing UI and animations to implementing real-time chat
+            . From designing UI and animations to implementing backend services
             and authentication, I enjoy owning features end-to-end.
           </p>
           <p className="text-xs leading-relaxed text-slate-300 md:text-sm">
@@ -58,7 +58,7 @@ export const AboutAndSkills = () => {
               </p>
               <ul className="space-y-1 text-[11px] text-slate-400">
                 <li>Flutter, Dart</li>
-                <li>State management (Provider / Riverpod / BLoC)</li>
+                <li>State management (BLoC / GetX / Provider )</li>
                 <li>Animations & custom widgets</li>
               </ul>
             </div>
@@ -79,7 +79,7 @@ export const AboutAndSkills = () => {
               <ul className="space-y-1 text-[11px] text-slate-400">
                 <li>Clean architecture</li>
                 <li>Modular codebases</li>
-                <li>Testing & CI basics</li>
+                <li>Testing & CDCI pipeline</li>
               </ul>
             </div>
             <div className="space-y-1">

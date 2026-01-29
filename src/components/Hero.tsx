@@ -26,7 +26,7 @@ export const Hero = () => {
         variants={containerVariants}
       >
         <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent-400">
-          Flutter • Backend • Real-time Chat
+          Flutter • Node.js
         </p>
         <h1 className="text-3xl font-semibold tracking-tight text-slate-50 sm:text-4xl md:text-5xl">
           Building high-quality{" "}
@@ -41,7 +41,7 @@ export const Hero = () => {
             {personalInfo.role}
           </span>{" "}
           with hands-on experience delivering production-ready Flutter
-          applications and a real-time chat backend. I care deeply about clean
+          applications and backend. I care deeply about clean
           architecture, performance, and user experience.
         </p>
         <div className="flex flex-wrap items-center gap-3">
@@ -104,7 +104,7 @@ export const Hero = () => {
               8+ Flutter apps
             </span>
             <span className="rounded-full bg-slate-900/80 px-3 py-1">
-              Real-time chat backend
+              Node.js backend
             </span>
             <span className="rounded-full bg-slate-900/80 px-3 py-1">
               Open source on GitHub
