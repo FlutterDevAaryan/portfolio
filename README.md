@@ -1,6 +1,21 @@
 ## Portfolio
 
-This repository contains a **professional developer portfolio** built with **React, TypeScript, Vite, Tailwind CSS, and Framer Motion**.
+This repository contains a **professional developer portfolio**
+
+---
+
+### ⚠️ "Failed to load module script" / MIME type `application/octet-stream`?
+
+**This almost always means GitHub Pages is deploying from the wrong branch.** The live site must be built and served from **gh-pages**, not **main**.
+
+1. Open your repo on GitHub → **Settings** → **Pages**.
+2. Under **Build and deployment** → **Source**, choose **"Deploy from a branch"**.
+3. Under **Branch**, select **`gh-pages`** (not `main`) and **/ (root)**.
+4. Click **Save**. Wait 1–2 minutes, then hard-refresh the site (Ctrl+Shift+R).
+
+The workflow pushes the **built** site (JS/CSS bundles) to `gh-pages`. If Pages uses `main`, it serves **source** files (e.g. `main.tsx`), which are sent with the wrong MIME type and break.
+
+--- built with **React, TypeScript, Vite, Tailwind CSS, and Framer Motion**.
 
 The site is optimized for recruiters and hiring managers, showcasing:
 
