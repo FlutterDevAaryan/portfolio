@@ -4,6 +4,27 @@ This repository contains a **professional developer portfolio**
 
 ---
 
+### ⚠️ Changes to Hero, Projects, AboutAndSkills (or any `src/` file) not showing on the live site?
+
+**The live site serves the built files in `docs/`, not the source in `src/`.**  
+After editing `Hero.tsx`, `Projects.tsx`, `AboutAndSkills.tsx`, or any file in `src/`:
+
+1. **Rebuild** so the new code is bundled into `docs/`:
+   ```bash
+   npm run build
+   ```
+2. **Commit and push** the updated `docs/` folder (and your source changes):
+   ```bash
+   git add docs src
+   git commit -m "content: update hero/projects/about and rebuild"
+   git push origin main
+   ```
+3. Wait 1–2 minutes, then hard-refresh the live site (Ctrl+Shift+R).
+
+If you skip step 1, the live site will keep showing the old content because `docs/assets/*.js` never got updated.
+
+---
+
 ### ⚠️ "Failed to load module script" / MIME type `application/octet-stream`?
 
 **This almost always means GitHub Pages is deploying from the wrong branch.** The live site must be built and served from **gh-pages**, not **main**.
