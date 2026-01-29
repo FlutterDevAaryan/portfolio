@@ -30,7 +30,7 @@ Edit `src/data.ts` and replace the placeholders:
 
 By default, the "Download Resume" button points to:
 
-- `personalInfo.resumeUrl = "/resume.pdf"` in `src/data.ts`
+- `personalInfo.resumeUrl = "resume.pdf"` in `src/data.ts`
 
 Place your actual resume file at:
 
@@ -66,9 +66,8 @@ The repo is set up to deploy automatically with **GitHub Actions**.
 - Your portfolio will be available at:
   - **https://\<your-username\>.github.io/portfolio/**
 
-If you use a repo named **\<username\>.github.io** (user site) instead of **portfolio** (project site):
+The build uses **relative base** (`base: './'`) so the app works when served at **.../portfolio/** (GitHub Pages project site). Locally, `npm run dev` serves at **http://localhost:5173/** (root).
 
-- In `vite.config.ts`, set `base: '/'` instead of `base: '/portfolio/'`.
-- Redeploy; the site will be at **https://\<your-username\>.github.io/**.
+If you use a repo named **\<username\>.github.io** (user site) instead of **portfolio** (project site), the site will be at **https://\<your-username\>.github.io/**; the same relative base works there too.
 
 You can adjust the design, colors, and copy in the React components under `src/components` as needed.
