@@ -62,26 +62,40 @@ npm run preview
 
 This builds the optimized production bundle and lets you preview it locally.
 
-### 5. Hosting on GitHub Pages
+### 5. Hosting on GitHub Pages (simplest setup)
 
-The repo deploys via **GitHub Actions** to the **gh-pages** branch. GitHub Pages serves from that branch.
+This project is configured to build into a `docs` folder, so you can use GitHub Pages **without any Actions or extra branches**.
 
 #### One-time setup (in your GitHub repo)
 
 1. Push this project to a GitHub repository (e.g. `your-username/portfolio`).
 2. In the repo: **Settings → Pages**.
 3. Under **Build and deployment**:
-   - **Source**: choose **Deploy from a branch** (not “GitHub Actions”).
-   - **Branch**: `gh-pages` → **/ (root)**.
-4. Save. The workflow creates/updates the `gh-pages` branch on each run.
+   - **Source**: choose **Deploy from a branch**.
+   - **Branch**: `main` → **/docs**.
+4. Save.
 
-#### After each push
+#### After each change
 
-- Pushing to **main** runs the workflow: it builds the site and pushes `dist` to the **gh-pages** branch.  
-  If your default branch is **master**, edit `.github/workflows/deploy.yml` and change `branches: ["main"]` to `branches: ["master"]`.
-- Your portfolio will be at:
-  - **https://\<your-username\>.github.io/portfolio/**
+1. Build the site locally:
 
-The build uses **base** `'/portfolio/'` so assets load correctly at that URL. Locally, `npm run dev` serves at **http://localhost:5173/portfolio/**.
+   ```bash
+   npm run build
+   ```
+
+   This writes the production build into the `docs` folder.
+
+2. Commit and push the `docs` folder (along with your code):
+
+   ```bash
+   git add docs
+   git commit -m "build: update portfolio docs"
+   git push origin main
+   ```
+
+3. Your portfolio will be available at:
+   - **https://\<your-username\>.github.io/portfolio/**
+
+GitHub Pages will serve the **built** files from `docs`, so the browser loads normal `.js` bundles (not `.tsx` source files), and the MIME type and favicon errors disappear.
 
 You can adjust the design, colors, and copy in the React components under `src/components` as needed.

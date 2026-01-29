@@ -2,13 +2,16 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 
 // https://vitejs.dev/config/
-// Base must match GitHub Pages project path: https://<username>.github.io/portfolio/
-// Locally: npm run dev → http://localhost:5173/portfolio/ , preview → http://localhost:4173/portfolio/
+// Using relative base so it works from /docs on GitHub Pages
+// Locally: npm run dev → http://localhost:5173/
 export default defineConfig({
-  base: "/portfolio/",
+  base: "./",
   plugins: [react()],
   server: {
     port: 5173
+  },
+  build: {
+    outDir: "docs"
   }
 });
 
