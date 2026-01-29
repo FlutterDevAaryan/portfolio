@@ -49,25 +49,24 @@ This builds the optimized production bundle and lets you preview it locally.
 
 ### 5. Hosting on GitHub Pages
 
-The repo is set up to deploy automatically with **GitHub Actions**.
+The repo deploys via **GitHub Actions** to the **gh-pages** branch. GitHub Pages serves from that branch.
 
 #### One-time setup (in your GitHub repo)
 
 1. Push this project to a GitHub repository (e.g. `your-username/portfolio`).
 2. In the repo: **Settings → Pages**.
 3. Under **Build and deployment**:
-   - **Source**: choose **GitHub Actions** (not “Deploy from a branch”).
-4. Save. You don’t need to create the `gh-pages` branch or set a branch/folder.
+   - **Source**: choose **Deploy from a branch** (not “GitHub Actions”).
+   - **Branch**: `gh-pages` → **/ (root)**.
+4. Save. The workflow creates/updates the `gh-pages` branch on each run.
 
 #### After each push
 
-- Pushing to the **main** branch runs the workflow: it builds the site and deploys to GitHub Pages.  
+- Pushing to **main** runs the workflow: it builds the site and pushes `dist` to the **gh-pages** branch.  
   If your default branch is **master**, edit `.github/workflows/deploy.yml` and change `branches: ["main"]` to `branches: ["master"]`.
-- Your portfolio will be available at:
+- Your portfolio will be at:
   - **https://\<your-username\>.github.io/portfolio/**
 
-The build uses **relative base** (`base: './'`) so the app works when served at **.../portfolio/** (GitHub Pages project site). Locally, `npm run dev` serves at **http://localhost:5173/** (root).
-
-If you use a repo named **\<username\>.github.io** (user site) instead of **portfolio** (project site), the site will be at **https://\<your-username\>.github.io/**; the same relative base works there too.
+The build uses **base** `'/portfolio/'` so assets load correctly at that URL. Locally, `npm run dev` serves at **http://localhost:5173/portfolio/**.
 
 You can adjust the design, colors, and copy in the React components under `src/components` as needed.
