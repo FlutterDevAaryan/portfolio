@@ -29,6 +29,9 @@ jobs:
       - name: Build
         run: node ./node_modules/vite/bin/vite.js build
 
+      - name: Add .nojekyll for correct MIME types
+        run: touch ./dist/.nojekyll
+
       - name: Verify build output
         run: |
           ls -la ./dist
