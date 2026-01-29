@@ -128,6 +128,7 @@ export const projects: Project[] = [
   }
 ];
 
+
 export const personalInfo = {
   name: "Aaryan Jain",
   role: "Flutter & Backend Developer",
@@ -137,4 +138,3 @@ export const personalInfo = {
   linkedin: "https://www.linkedin.com/in/aaryan-jain-dev/",
   resumeUrl: "resume.pdf" // relative so it works on GitHub Pages (/portfolio/) and locally
 };
-
