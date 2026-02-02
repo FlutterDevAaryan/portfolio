@@ -137,7 +137,7 @@ export const projects: Project[] = [
 
 
 export const personalInfo = {
-  name: "Aaryan Jain",
+  name: "Aryan Jain",
   role: "Flutter & Backend Developer",
   location: "Ahmedabad, India",
   email: "jainaryan24111@gmail.com",
